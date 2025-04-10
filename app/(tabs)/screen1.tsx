@@ -40,7 +40,7 @@ export default function Screen1() {
                 <Pressable onPress={handlePress1}>
                     <View 
                         style={[isSelected && styles.selectedBorder]}>
-                        <Image source={require('@/assets/images/left-eye.png')}/>
+                        <Image source={require('@/assets/images/left-eye.png')} style={styles.image}/>
                         <Text style={styles.text}>Capture Left Eye</Text>
                     </View>
                 </Pressable>
@@ -48,8 +48,8 @@ export default function Screen1() {
                 <Pressable onPress={handlePress2}>
                     <View 
                         style={[isSelected2 && styles.selectedBorder]}>
-                        <Image source={require('@/assets/images/right-eye.png')}/>
-                        <Text style={styles.text}>Capture Left Eye</Text>
+                        <Image source={require('@/assets/images/right-eye.png')} style={styles.image}/>
+                        <Text style={styles.text}>Capture Right Eye</Text>
                     </View>
                 </Pressable>
             </View>
@@ -86,6 +86,9 @@ const styles = StyleSheet.create({
     gap: 26,
     marginTop: 30,
   },
+  image:{
+    width:120,
+  },
   selectedBorder:{
     borderWidth: 2,
     borderColor: 'green',
@@ -96,6 +99,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize:12,
     paddingTop:4,
+    color: 'gray',
   },
   heading:{
     display: 'flex',
